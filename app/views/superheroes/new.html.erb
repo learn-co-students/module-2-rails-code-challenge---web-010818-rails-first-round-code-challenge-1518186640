@@ -1,0 +1,19 @@
+
+
+<h2>Create a New Hero</h2>
+
+<% if flash[:message] %>
+  <h3>Invalid Entry: <%= flash[:message] %></h3>
+<% end %>
+
+<%= form_for @superhero do |f| %>
+  <%= f.label 'Name' %>
+  <%= f.text_field :name %> <br>
+  <%= f.label 'Super name' %>
+  <%= f.text_field :super_name %> <br>
+  <%= f.label :superpower %>
+  <%= f.collection_select :superpower_id, Superpower.all, :id, :name %> <br>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Return to Heroes Index', superheroes_path %>

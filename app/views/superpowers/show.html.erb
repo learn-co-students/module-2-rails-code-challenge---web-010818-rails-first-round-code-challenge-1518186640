@@ -1,0 +1,14 @@
+<h2>Power: <%= @superpower.name %></h2>
+<p>Description: <%= @superpower.description %></p>
+
+<h2>Heroes</h2>
+<ul>
+  <% @superpower.superheroes.each do |superhero| %>
+    <li>
+      <%= link_to superhero.super_name, superhero %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Return to Heroes Index', superheroes_path %>
+<%= link_to 'Return to Powers Index', superpowers_path %>
