@@ -3,7 +3,7 @@
 <ul>
   <% @superpowers.each do |superpower| %>
     <li>
-      <%= superpower.name %>
+      <%= link_to superpower.name.split.map(&:capitalize).join(' '), superpower_path(superpower) %>
       <br>
       Description: <%= superpower.description %>
     </li>
