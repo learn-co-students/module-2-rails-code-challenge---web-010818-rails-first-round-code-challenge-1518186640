@@ -3,10 +3,13 @@
 <ul>
   <% @superpowers.each do |superpower| %>
     <li>
-      <%= superpower.name %>
+      <a href="/superpowers/<%= superpower.id %>"><%= superpower.name %></a>
       <br>
       Description: <%= superpower.description %>
     </li>
     <br>
   <% end %>
 </ul>
+<br>
+
+<p><a href="/superheroes">Check Out All Superheroes</a></p>

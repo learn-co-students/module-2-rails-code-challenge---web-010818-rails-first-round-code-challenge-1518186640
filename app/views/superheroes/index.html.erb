@@ -1,10 +1,19 @@
 <h2>All Superheroes</h2>
 
+<%= form_tag(superheroes_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search By Superpower" %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
-      <%= superhero.super_name %>
+      <a href="/superheroes/<%= superhero.id %>"><%= superhero.super_name %></a>
     </li>
     <br>
   <% end %>
 </ul>
+<br>
+
+<p><a href="/superheroes/new">Create Your Own Hero</a></p>
+<p><a href="/superpowers">Check Out All Superpowers</a></p>
