@@ -1,0 +1,5 @@
+<h2>Name: <%= @superhero.name %></h2>
+
+<h2>Super Name: <%= @superhero.super_name %></h2>
+
+<p><%= link_to @superhero.superpower.name.titleize, superpower_path(@superhero.superpower) %></p>
