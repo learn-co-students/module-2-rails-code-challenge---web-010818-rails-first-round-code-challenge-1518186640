@@ -1,2 +1,3 @@
-class Superpower < ApplicationRecord
+class Superpower < ActiveRecord::Base
+  has_many :superheroes
 end
