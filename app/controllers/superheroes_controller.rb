@@ -33,7 +33,6 @@ class SuperheroesController < ApplicationController
     end
 
     render :index
-
   end
 
   private
