@@ -1,10 +1,18 @@
 <h2>All Superheroes</h2>
 
+<label for="">Search by superpower</label>
+
+<form class="" action="/search" method="post">
+  <input type="search" name="superpower[name]" value="">
+</form>
+
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
-      <%= superhero.super_name %>
+      <%= link_to superhero.super_name, superhero_path(superhero)%>
     </li>
     <br>
   <% end %>
 </ul>
+
+<%= link_to "Create A New Superhero", new_superhero_path %>
