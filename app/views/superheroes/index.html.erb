@@ -1,10 +1,26 @@
 <h2>All Superheroes</h2>
 
+
+  <%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search By Superpower :") %><br>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+  <% end %>
+
+  <% flash.each do |key, value| %>
+  <%= content_tag :div, value, class: "flash #{key}" %>
+  <% end %>
+
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
-      <%= superhero.super_name %>
+      <%= link_to superhero.super_name, superhero %>
     </li>
     <br>
   <% end %>
 </ul>
+
+
+
+<%= link_to "Create Your Own Superhero", new_superhero_path %><br>
+<%= link_to "See All Superpowers", superpowers_path%>
