@@ -1,0 +1,19 @@
+
+<h1> <%= @superpower.name %></h1>
+<p> <%= @superpower.description%></p>
+
+<ul>
+  <% @superpower.superheroes.each do |superheroes| %>
+    <li><%= superheroes.name %></li>
+    <br>
+  <% end %>
+</ul>
+
+<!-- Add a filter to the index view of the superheroes.
+This will allow the visitor to search for an existing
+superpower and display all the superheroes with that
+superpower on the same view page.
+
+input is a superpower
+must find superpower_id
+display all superheroes with this superpower_id

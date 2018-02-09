@@ -3,8 +3,39 @@
 <ul>
   <% @superheroes.each do |superhero| %>
     <li>
-      <%= superhero.super_name %>
+        <%= link_to superhero.super_name, superhero_path(superhero)%>
     </li>
     <br>
   <% end %>
 </ul>
+<br>
+<br>
+
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search by a superpower id:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+<ul>
+  <% @superpowers.each do |superpower| %>
+    <li>
+        <%= "#{superpower.id} - #{superpower.name}"%>
+    </li>
+    <br>
+  <% end %>
+</ul>
+
+
+
+
+<!-- Add a filter to the index view of the superheroes.
+This will allow the visitor to search for an existing
+superpower and display all the superheroes with that
+superpower on the same view page.
+
+input is a superpower
+must find superpower_id
+display all superheroes with this superpower_id
+
+-->
