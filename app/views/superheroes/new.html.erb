@@ -1,0 +1,15 @@
+<h2>Create Superhero:</h2>
+
+<% if flash[:message] %>
+  <%= flash[:message] %>
+<% end %>
+
+<%= form_for @superhero do |f| %>
+  <%= f.label "Name:"%><br>
+  <%= f.text_field :name %><br>
+  <%= f.label "Super name:" %><br>
+  <%= f.text_field :super_name %><br>
+  <%= f.label "Superpower:" %><br>
+  <%= f.collection_select :superpower_id, @superpowers, :id, :name%><br>
+  <%= f.submit %>
+<% end %>
