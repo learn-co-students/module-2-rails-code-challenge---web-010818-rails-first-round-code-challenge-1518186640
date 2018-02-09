@@ -1,0 +1,11 @@
+<h1>Power: <%= @superpower.name.titleize %></h1>
+
+<h4>Description: </h4>
+<p><%= @superpower.description %></p>
+
+<h4>Superheroes:</h4>
+<ul>
+  <% @superpower.superheroes.each do |superhero| %>
+    <li><%= link_to superhero.super_name, superhero_path(superhero) %></li>
+  <% end %>
+</ul>

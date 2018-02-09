@@ -10,5 +10,13 @@
 
   <body>
     <%= yield %>
+
+    <footer>
+      <br>
+      <hr>
+      <%= link_to "Create new superhero", new_superhero_path %>
+      <%= link_to "See all superheroes", superheroes_path %>
+      <%= link_to "See all superpowers", superpowers_path %>
+    </footer>
   </body>
 </html>
