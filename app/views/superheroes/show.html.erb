@@ -1,0 +1,6 @@
+<h2>Name: <%= @superhero.name %></h2>
+<h3>Hero Name: <%= @superhero.super_name %></h3>
+<h3>Power: <%= link_to @superhero.superpower.name, @superhero.superpower %></h3>
+
+<%= link_to 'Return to Heroes Index', superheroes_path %>
+<%= link_to 'Return to Powers Index', superpowers_path %>
