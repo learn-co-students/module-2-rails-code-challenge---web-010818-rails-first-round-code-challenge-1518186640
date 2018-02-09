@@ -1,0 +1,6 @@
+<h1><strong>Name:</strong>
+  <strong style="color: blue;"><%= @superhero.name %></strong></h1>
+<h2><strong>Super Name:</strong>
+  <strong style="color: green;"><%= @superhero.super_name %></strong></h2>
+<h3><strong>Super Power:</strong>
+  <%= link_to @superhero.superpower.name.split.map(&:capitalize).join(' '), superpower_path %></h3>
