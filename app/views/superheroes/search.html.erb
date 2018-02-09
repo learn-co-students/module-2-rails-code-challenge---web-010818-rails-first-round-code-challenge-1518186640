@@ -1,0 +1,13 @@
+<h1>All The Superheroes With That Power : </h1>
+
+<% @superheroes.each do |superhero| %>
+<h3><%= link_to superhero.name, superhero %></h3>
+<%end %>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<%= link_to "Back to Superheroes", superheroes_path%>
