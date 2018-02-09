@@ -6,6 +6,6 @@
   <%= f.label :super_name %><br>
   <%= f.text_field :super_name %><br>
   <%= f.label :superpower %><br>
-  <%= f.collection_select :superpower_ids, Superpower.all, :id, :name %>
+  <%= f.collection_select :superpower_id, Superpower.all, :id, :name %>
   <%= f.submit %>
 <% end %>

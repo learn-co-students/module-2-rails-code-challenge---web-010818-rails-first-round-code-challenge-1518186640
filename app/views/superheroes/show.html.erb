@@ -1,8 +1,4 @@
 <h1><%= @superhero.name %> | <%= @superhero.super_name %></h1>
 
-<h3>Super Powers:</h3>
-<% @superhero.superpowers.each do |sp|%>
-  <li>
-    <%= sp.name %>
-  </li>
-<% end %>
+<h3>Super Power:</h3>
+<%= @superhero.superpower.name %>

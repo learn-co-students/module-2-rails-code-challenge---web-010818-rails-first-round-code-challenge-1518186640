@@ -1,4 +1,3 @@
 class Superpower < ApplicationRecord
-  has_many :heropowers
-  has_many :superheroes, through: :heropowers
+  has_many :superheroes
 end

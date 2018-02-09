@@ -10,20 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180209145419) do
-
-  create_table "heropowers", force: :cascade do |t|
-    t.integer  "superhero_id"
-    t.integer  "superpower_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
+ActiveRecord::Schema.define(version: 20170725185638) do
 
   create_table "superheroes", force: :cascade do |t|
     t.string   "name"
     t.string   "super_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "superpower_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "superpowers", force: :cascade do |t|

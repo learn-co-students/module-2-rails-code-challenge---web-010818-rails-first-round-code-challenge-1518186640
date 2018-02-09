@@ -1,6 +1,5 @@
 class Superhero < ApplicationRecord
-  has_many :heropowers
-  has_many :superpowers, through: :heropowers
+  belongs_to :superpower
 
-  validates :name, uniqueness: {scope: :superpower_id}
+  validates :name, uniqueness: true
 end
